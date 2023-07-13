@@ -1,4 +1,4 @@
-package com.ll.exam.test2;
+package com.ll.exam.test2.article;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;

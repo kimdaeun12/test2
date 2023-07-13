@@ -1,4 +1,4 @@
-package com.ll.exam.test2;
+package com.ll.exam.test2.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -10,12 +10,13 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-public class Article {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private String title;
+    private String name;
 
-    private String content;
+    private String password;
+
 }

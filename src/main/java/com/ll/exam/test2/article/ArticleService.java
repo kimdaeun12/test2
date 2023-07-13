@@ -1,5 +1,7 @@
-package com.ll.exam.test2;
+package com.ll.exam.test2.article;
 
+import com.ll.exam.test2.article.Article;
+import com.ll.exam.test2.article.ArticleRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
