@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<tr th:each="list : ${list}">
+    <td>
+        <a th:href="@{|/article/detail/${list.id}|}" th:text="${list.title}"></a>
+    </td>
+</tr>
+<a th:href="@{/article/create}">등록</a>
+</body>
+</html>
+
+
