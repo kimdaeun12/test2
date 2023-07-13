@@ -5,6 +5,8 @@
     <title>Title</title>
 </head>
 <body>
+<nav th:replace="~{logo :: navbarFragment}"></nav>
+
 <form th:action="@{|/article/create|}" method="post">
 <input type="text" name="title">
 <textarea name="content"></textarea>

@@ -38,4 +38,5 @@ public class ArticleController {
         model.addAttribute("detail",article);
         return "detail";
     }
+
 }
