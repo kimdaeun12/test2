@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>로그인폼</title>
+</head>
+<body>
+<form th:action="@{/user/login}" method="post">
+
+
+    <label for="username">사용자ID</label>
+    <input type="text" name="username">
+
+
+    <label for="password" class="form-label">비밀번호</label>
+    <input type="password" name="password">
+
+  <button type="submit">로그인</button>
+</form>
+</body>
+</html>

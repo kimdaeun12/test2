@@ -7,6 +7,10 @@
 <body>
 <nav th:fragment="navbarFragment" >
 <a href="/">메인으로가기</a>
+    <a sec:authorize="isAnonymous()" th:href="@{/user/login}">로그인</a>
+    <a sec:authorize="isAuthenticated()" th:href="@{/user/logout}">로그아웃</a>
+    <a th:href="@{/user/signup}">회원가입</a>
+
 </nav>
 </body>
 </html>
