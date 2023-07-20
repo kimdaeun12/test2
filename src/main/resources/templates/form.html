@@ -6,10 +6,9 @@
 </head>
 <body>
 <nav th:replace="~{logo :: navbarFragment}"></nav>
-
 <form th:action="@{|/article/create|}" method="post">
-<input type="text" name="title">
-<textarea name="content"></textarea>
+    <input type="text" name="title">
+    <textarea name="content"></textarea>
 <button type="submit">등록</button>
 </form>
 </body>
