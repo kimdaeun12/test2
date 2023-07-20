@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<nav th:replace="~{layout :: navbarFragment}"></nav>
+
+<h3 th:text="${article.title}"></h3>
+<p th:text="${article.content}"></p>
+<a th:href="@{/article/list}">목록</a>
+<a th:href="@{|/article/modify/${article.id}|}">수정</a>
+<!--<div class="my-3">-->
+<!--    <a th:href="@{|/article/modify/${article.id}|}"-->
+<!--       sec:authorize="isAuthenticated()"-->
+<!--       th:if="${user.id != null and #authentication.getPrincipal().getId() == user.id}"-->
+<!--       th:text="수정"></a>-->
+<!--</div>-->
+<a th:href="@{|/article/delete/${article.id}|}">삭제</a>
+
+</body>
+</html>
