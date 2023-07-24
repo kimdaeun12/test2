@@ -11,13 +11,24 @@
 <p th:text="${article.content}"></p>
 <a th:href="@{/article/list}">목록</a>
 <a th:href="@{|/article/modify/${article.id}|}">수정</a>
-<!--<div class="my-3">-->
-<!--    <a th:href="@{|/article/modify/${article.id}|}"-->
-<!--       sec:authorize="isAuthenticated()"-->
-<!--       th:if="${user.id != null and #authentication.getPrincipal().getId() == user.id}"-->
-<!--       th:text="수정"></a>-->
-<!--</div>-->
-<a th:href="@{|/article/delete/${article.id}|}">삭제</a>
+
+<a th:href="@{|/article/modify/${article.id}|}"
+   sec:authorize="isAuthenticated()"
+   th:if="${article.author != null and #authentication.getPrincipal().getUsername() == article.author.username}"
+   th:text="수정"></a>
+
+    <a th:href="@{|/question/modify/${question.id}|}" class="btn btn-sm btn-outline-secondary"
+       sec:authorize="isAuthenticated()"
+       th:if="${question.author != null and #authentication.getPrincipal().getUsername() == question.author.username}"
+       th:text="수정"></a>
+
+
+
+
+<a th:href = "@{|/article/delete/${article.id}|}"
+   sec:authorize="isAuthenticated()"
+   th:if="${article.author != null and #authentication.getPrincipal().getUsername() == article.author.username}"
+   th:text="삭제"></a>
 
 </body>
 </html>

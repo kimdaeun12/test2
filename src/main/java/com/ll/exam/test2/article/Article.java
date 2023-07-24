@@ -1,9 +1,7 @@
 package com.ll.exam.test2.article;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.ll.exam.test2.user.SiteUser;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -18,4 +16,7 @@ public class Article {
     private String title;
 
     private String content;
+
+    @ManyToOne
+    private SiteUser author;
 }
